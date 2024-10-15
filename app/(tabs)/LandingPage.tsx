@@ -11,7 +11,7 @@ interface FeatureType {
 
 // Static data
 const staticData = {
-  headerImage: 'https://your-image-url.com', // Replace with your image URL or local asset
+  headerImage: '../../assets/images/background.png', // Replace with your image URL or local asset
   title: "Welcome to Courto – Your Ultimate Sports Companion",
   description: "Looking for a place to play or new teammates? Courto connects you to the best courts, turfs, and sports communities in your city. Whether it’s football, cricket, tennis, badminton, or any other sport, Courto makes it easy to book your favorite venues, join matches, and meet like-minded players.",
   features: [
@@ -105,7 +105,7 @@ interface FeatureProps {
 }
 
 const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
-  <View style={styles.feature}>
+  <TouchableOpacity style={styles.feature}>
     <View style={styles.iconContainer}>
       {icon}
     </View>
@@ -113,7 +113,7 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
       <Text style={styles.featureTitle}>{title}</Text>
       <Text style={styles.featureDescription}>{description}</Text>
     </View>
-  </View>
+  </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 100, // Adjust width as needed
-    height: 40, // Adjust height as needed
+    height: 20, // Adjust height as needed
   },
   searchIcon: {
     padding: 10,
@@ -184,6 +184,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 4,
     elevation: 2, // Android shadow effect
+    paddingVertical: 15,
+    transform: [{ scale: 1 }], // Initial scale for hover effect
   },
   iconContainer: {
     backgroundColor: '#FFFFFF', // White background for icons
@@ -232,4 +234,5 @@ const styles = StyleSheet.create({
   },
 });
 
+// Export the LandingPage component
 export default LandingPage;
