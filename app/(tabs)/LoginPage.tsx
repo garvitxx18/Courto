@@ -15,12 +15,14 @@ const LoginPage: React.FC = ({ navigation }) => {
     <ScrollView contentContainerStyle={styles.container}>
       {/* Image Section */}
       <Image
-        source={require("../../assets/images/image.png")} // Replace with the actual image
+        source={require("../../assets/images/image2.png")} // Replace with the actual image
         style={styles.headerImage}
       />
 
       {/* Title Section */}
-      <Text style={styles.title}>Courto – Your Ultimate Sports Companion</Text>
+      <Text style={styles.title}>
+        Courto – Your Ultimate <br /> Sports Companion
+      </Text>
       <Text style={styles.subTitle}>Your Ultimate Sports Companion</Text>
 
       {/* Email Input */}
@@ -99,8 +101,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerImage: {
-    width: 100,
-    height: 20,
+    width: 325,
+    height: 325,
     marginBottom: 20,
     borderRadius: 15,
   },
