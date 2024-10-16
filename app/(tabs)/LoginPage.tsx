@@ -6,24 +6,15 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
-  Image,
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 const LoginPage: React.FC = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {/* Image Section */}
-      <Image
-        source={require("../../assets/images/image2.png")} // Replace with the actual image
-        style={styles.headerImage}
-      />
-
       {/* Title Section */}
-      <Text style={styles.title}>
-        Courto – Your Ultimate <br /> Sports Companion
-      </Text>
-      <Text style={styles.subTitle}>Your Ultimate Sports Companion</Text>
+      <Text style={styles.title}>Courto</Text>
+      <Text style={styles.subTitle}>Your Sports Booking Hub</Text>
 
       {/* Email Input */}
       <View style={styles.inputContainer}>
@@ -31,7 +22,7 @@ const LoginPage: React.FC = ({ navigation }) => {
         <TextInput
           style={styles.input}
           placeholder="Enter your email address"
-          placeholderTextColor="#777"
+          placeholderTextColor="#777777"
         />
       </View>
 
@@ -42,13 +33,13 @@ const LoginPage: React.FC = ({ navigation }) => {
           <TextInput
             style={styles.input}
             placeholder="Enter your password"
-            placeholderTextColor="#777"
+            placeholderTextColor="#777777"
             secureTextEntry
           />
           <FontAwesome
             name="eye"
             size={20}
-            color="#999"
+            color="#777777"
             style={styles.eyeIcon}
           />
         </View>
@@ -60,7 +51,7 @@ const LoginPage: React.FC = ({ navigation }) => {
       </TouchableOpacity>
 
       {/* Log In Button */}
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton} activeOpacity={0.85}>
         <Text style={styles.loginButtonText}>Log In</Text>
       </TouchableOpacity>
 
@@ -72,13 +63,13 @@ const LoginPage: React.FC = ({ navigation }) => {
       </View>
 
       {/* Social Login Buttons */}
-      <TouchableOpacity style={styles.socialButton}>
+      <TouchableOpacity style={styles.socialButton} activeOpacity={0.85}>
         <Text style={styles.socialButtonText}>
           <FontAwesome name="google" size={18} /> Log in with Google
         </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.socialButton}>
+      <TouchableOpacity style={styles.socialButton} activeOpacity={0.85}>
         <Text style={styles.socialButtonText}>
           <FontAwesome name="facebook" size={18} /> Log in with Facebook
         </Text>
@@ -97,21 +88,17 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 16,
-    backgroundColor: "#FFFFFF", // Updated to white background
+    backgroundColor: "#FFFFFF", // White background
     alignItems: "center",
   },
-  headerImage: {
-    width: 325,
-    height: 325,
-    marginBottom: 20,
-    borderRadius: 15,
-  },
   title: {
-    fontSize: 24,
-    fontWeight: "800",
+    paddingTop: 30,
+    fontSize: 28, // Larger title size
+    fontWeight: "900",
     textAlign: "center",
     color: "#000000", // Black text for title
     marginBottom: 8,
+    letterSpacing: 1, // Adding letter spacing for a modern feel
   },
   subTitle: {
     fontSize: 16,
@@ -132,9 +119,9 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: 14,
     borderRadius: 10,
-    backgroundColor: "#F3F4F6", // Light grey background for inputs
+    backgroundColor: "#F3F3F3", // Light grey background for inputs
     color: "#000000", // Black text for inputs
-    borderColor: "#E2E2E2", // Light grey border
+    borderColor: "#CCCCCC", // Light grey border
     borderWidth: 1,
   },
   passwordContainer: {
@@ -147,14 +134,14 @@ const styles = StyleSheet.create({
   },
   forgotPassword: {
     fontSize: 14,
-    color: "#E94560", // Light red for "Forgot Password?"
+    color: "#000000", // Black text for "Forgot Password?"
     alignSelf: "flex-end",
     marginBottom: 20,
   },
   loginButton: {
-    backgroundColor: "#E94560",
+    backgroundColor: "#000000", // Black background for button
     paddingVertical: 14,
-    borderRadius: 8,
+    borderRadius: 10, // Rounded button for a modern look
     width: "100%",
     alignItems: "center",
     marginBottom: 20,
@@ -177,7 +164,7 @@ const styles = StyleSheet.create({
   divider: {
     flex: 1,
     height: 1,
-    backgroundColor: "#E2E2E2", // Light grey divider
+    backgroundColor: "#CCCCCC", // Light grey divider
   },
   orText: {
     marginHorizontal: 10,
@@ -185,13 +172,13 @@ const styles = StyleSheet.create({
     color: "#777777",
   },
   socialButton: {
-    backgroundColor: "#F3F4F6", // Light grey for social buttons
+    backgroundColor: "#F3F3F3", // Light grey for social buttons
     paddingVertical: 14,
-    borderRadius: 8,
+    borderRadius: 10, // Rounded buttons for a modern look
     width: "100%",
     alignItems: "center",
     marginBottom: 15,
-    borderColor: "#E2E2E2",
+    borderColor: "#CCCCCC",
     borderWidth: 1,
   },
   socialButtonText: {
@@ -204,7 +191,7 @@ const styles = StyleSheet.create({
   },
   signUpButton: {
     fontSize: 16,
-    color: "#E94560",
+    color: "#000000", // Black text for sign-up button
     fontWeight: "700",
     marginTop: 5,
   },
